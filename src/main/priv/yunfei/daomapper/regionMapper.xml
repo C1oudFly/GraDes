@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+
+<!-- 地域分析的mapper语句，会通过页面传给后台的日期值来查询具体数据  -->	
+<mapper namespace="main.priv.yunfei.dao.RegionDao">
+	<select id="getRegionList" resultType="main.priv.yunfei.analog.region.entity.Region">
+		select date,region,regioncount,sessionnumber,sessionjumpnumber,jumprate
+			from pro_region;
+	</select>
+	
+	<select id="getRegionListBypro" parameterType="String" resultType="main.priv.yunfei.analog.region.entity.Region">
+		select date,region,regioncount regionCount,sessionnumber sessionNumber,sessionjumpnumber sessionJumpnumber,jumprate jumpRate
+			from pro_region where date=#{sdate};
+	</select>
+	
+</mapper>

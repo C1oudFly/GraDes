@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<!-- 事务 -->
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/beipro" />
+				<property name="username" value="root" />
+				<property name="password" value="mysqladmin" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 配置具体模块的mapper.xml，用于操作数据库获取数据 -->
+	<mappers>
+		<mapper resource="main.priv.yunfei.daomapper/orderMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/regionMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/userMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/browserMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/typeMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/yearAmountMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/housingMapper.xml" />
+		<mapper resource="main.priv.yunfei.daomapper/visitDepthMapper.xml" />
+	</mappers>
+	
+</configuration>

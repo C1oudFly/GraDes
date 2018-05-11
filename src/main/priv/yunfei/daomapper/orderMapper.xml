@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+
+<!-- 订单分析的mapper语句 -->	
+<mapper namespace="main.priv.yunfei.dao.OrderDao">
+	<select id="getOrdreList" resultType="main.priv.yunfei.analog.order.entity.Order">
+		select date,oid,successCount,refundCount,orderNumber,orderCount
+			from pro_order;
+	</select>
+</mapper>

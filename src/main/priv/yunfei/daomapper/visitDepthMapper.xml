@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+
+<!-- 年成交额分析的mapper语句  -->
+<mapper namespace="main.priv.yunfei.dao.VisitDepthDao">
+	<select id="getVisitDepthList" resultType="main.priv.yunfei.analog.visitdepth.entity.VisitDepth">
+		select date,count from pro_visitdepth;
+	</select>
+
+</mapper>

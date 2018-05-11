@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+	
+<!-- 浏览器分析的mapper语句，会通过页面传给后台的日期值来查询具体数据 -->
+<mapper namespace="main.priv.yunfei.dao.BrowserDao">
+	<select id="getBrowserList" parameterType="String" resultType="main.priv.yunfei.analog.browser.entity.Browser">
+		select date,browser,adduserCount,visitCount,userCount,addmemberCount,activeCount,memberCount,sessionnumberCount,sessionlengthdvalue,sessionlengthCount,averagesessionLength,browserPv
+			from pro_bigtablebrowser where date=#{sdate};
+	</select>	
+</mapper>

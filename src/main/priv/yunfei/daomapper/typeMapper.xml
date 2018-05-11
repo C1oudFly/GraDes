@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+	
+<!-- 房屋户型分析的mapper语句 -->
+<mapper namespace="main.priv.yunfei.dao.TypeDao">
+	<select id="getTypeList" resultType="main.priv.yunfei.real.type.entity.Type">
+		select * from rea_type where count>2000 and count &lt; 100000
+	</select>
+
+</mapper>

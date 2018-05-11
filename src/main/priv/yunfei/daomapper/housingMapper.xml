@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" > 
+
+<!-- 房屋用途分析的mapper语句 -->	
+<mapper namespace="main.priv.yunfei.dao.HousingDao">
+	<select id="getHousingList" resultType="main.priv.yunfei.real.housing.entity.Housing">
+		select * from rea_housing where count > 1 order by count*1 desc;
+	</select>
+
+</mapper>
